@@ -1,0 +1,35 @@
+﻿
+@{
+    ViewBag.Title = "Croper";
+}
+
+<h2>Суппер звізда</h2>
+
+<div class="container-fluid">
+    <img src="~/Images/1.jpg" id="image" style="width:100%" />
+</div>
+
+@section styles {
+    <link href="~/Content/croper/cropper.css" rel="stylesheet" />
+}
+
+@section scripts {
+    <script src="~/Scripts/croper/cropper.js"></script>
+
+
+    <script>
+        var image = document.getElementById('image');
+        var cropper = new Cropper(image, {
+            aspectRatio: 7 /8,
+            crop: function (e) {
+                console.log(e.detail.x);
+                console.log(e.detail.y);
+                console.log(e.detail.width);
+                console.log(e.detail.height);
+                console.log(e.detail.rotate);
+                console.log(e.detail.scaleX);
+                console.log(e.detail.scaleY);
+            }
+        });
+    </script>
+}

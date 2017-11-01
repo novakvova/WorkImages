@@ -36,5 +36,10 @@ namespace WebSiteDefault.Controllers
 
             return View();
         }
+
+        public ActionResult Croper()
+        {
+            return View();
+        }
     }
 }
