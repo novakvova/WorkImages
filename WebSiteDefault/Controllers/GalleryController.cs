@@ -22,6 +22,7 @@ namespace WebSiteDefault.Controllers
         {
             return View();
         }
+
         [HttpPost]
         public ActionResult Create(HttpPostedFileBase image)
         {
